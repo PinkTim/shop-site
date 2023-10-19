@@ -88,7 +88,7 @@ function fetchList(page = 1) {
             productDiv.className = 'basis-1/4';
             productDiv.innerHTML = `
                 <div class="object-cover border-black border-2 h-60 flex justify-center overflow-hidden items-center relative">
-                    <img src="${product?.images?.[0]?.src}" class=" object-cover max-w-full max-h-full h-60" />
+                    <img src="${product?.images?.[0]?.src}" class="object-cover w-full h-full" />
                     <div class="absolute bg-black p-2 top-3 left-3 rounded-md text-white leading-4 font-light text-sm" >USED</div>
                 </div>
                 <div class="flex justify-between flex-col overflow-hidden">
