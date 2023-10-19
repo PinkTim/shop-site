@@ -1,2 +1,107 @@
-<!DOCTYPE html>
-<html></html>
+<!doctype html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/9d0d7188a3.js" crossorigin="anonymous"></script>
+    <title>Test</title>
+  </head>
+  <body class="bg-mainColor font-sans">
+    <header class="container mx-auto">
+      <div class="flex items-start justify-between pt-12 pb-12 pl-62px pr-120px ">
+        <div class="flex items-start" >
+          <img src="assets/images/Logomark.png">
+          <img src="assets/images/VooDoo Test.png" class="ml-4">
+        </div>
+
+        <div class="flex items-center space-x-12" >
+          <button id="corz" class="flex justify-between items-center" onclick="toggleCart()">
+            <img class="hover:scale-125" src="assets/images/shopping-cart (1) 1.png"> 
+            <div class="font-bold" id="cart-icon" ></div>
+          </button>
+          <a href="#sign" class="bg-black p-3 text-white rounded text-center font-bold text-sm leading-4">Sign-up</a>
+        </div> 
+      </div>
+    </header>
+
+    <div class="border-black border-b-2 mb-24"></div>
+
+    <main class="container mx-auto  pr-8 pl-8">
+      <div class="  bg-black rounded-md overflow-hidden">
+        <div  class=" flex justify-between bg-black rounded-md p-6">
+          <div class="flex items-center space-x-1 text-white">
+            <img src="assets/images/alert-circle.png">
+            <span class="text-white  font-medium">ALPHA</span>
+            <span class=" pl-12 font-medium ">Important info regarding our service</span>
+          </div>
+          <button id="click" class="text-white">
+            <i class="fa fa-chevron-right"></i>
+          </button>
+        </div>
+        <custom-menu></custom-menu>
+      </div>
+
+      <div class="grid py-12 gap-8 grid-cols-1 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4" id="products" ></div>
+
+      <div class="flex justify-center py-12 ">
+        <ul id="pagination" class="flex flex-row flex-wrap text-lg  gap-4">
+        </ul>
+      </div>
+    </main>
+
+    <div class="border-black border-b-2 pt-12"></div>
+
+    <footer class="bg-white">
+      <div class="container py-84px mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-left font-bold">
+          <div class="flex justify-center w-70 h-70 items-center grow order-2 md:order-none">
+            <img src="assets/images/Logomark 2.png">
+          </div>
+          <ul>
+            <li>FAQ</li>
+            <li>RETURNS</li>
+            <li>CONTACT</li> 
+          </ul>
+          <ul>
+            <li>TERMS & CONDITIONS</li>
+            <li>PRIVACY POLICY</li>
+            <li>COOKIE POLICY</li>
+            <li>COOKIE SETTING</li>
+          </ul>
+          <ul>
+            <li>CABOUT SECOND CHANCE</li>
+            <li>CAREER</li>
+            <li>FACEBOOK</li>
+            <li>INSTAGRAM</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div id="cart" class="fixed invisible overflow-auto bg-black w-460px h-full right-0 top-0 py-6 px-12">
+      <div class="flex justify-between items-center">
+        <div class=" text-gray-200 text-2xl" >Shopping Cart</div>
+        <button onclick="toggleCart()"class="text-white fa-solid fa-x"></button>
+      </div>
+      
+      <div class="border-gray-200 border-b-2 pt-5"></div>
+
+      <div class="flex flex-col py-12 overflow-auto">
+        <div id="cart-items" class="flex flex-col gap-4 text-gray-200"></div>
+        <div class="border-gray-200 border-b-2 pt-12"></div>
+        <div class="flex justify-between py-5 text-gray-200">
+          <div>TOTAL</div>
+          <div class="font-bold" id="total-price"></div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="itemsList.js"></script>
+    <script src="openCart.js"></script>
+    <script src="customElem.js"></script>
+  </body>
+</html>
